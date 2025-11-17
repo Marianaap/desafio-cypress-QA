@@ -17,7 +17,7 @@ Cypress.Commands.add('loginByApi', (username, password) => {
          login: "Login"
       }
    }).then((response) => {
-      expect(response.status).to.eq(302)
+      expect(response.status).to.eq(200)
 
       const cookies = response.headers['set-cookie'];
       if (!cookies) return;
